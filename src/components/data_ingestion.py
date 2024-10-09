@@ -9,11 +9,9 @@ from pathlib import Path
 from dataclasses import dataclass
 
 class DataIngestionConfig:
-    def __init__(self):
-        self.raw_data_path='artifacts/raw.csv'
-        self.train_data_path='artifacts/train.csv'
-        self.test_data_path='artifacts/test.csv'
-        os.makedirs('artifacts',exist_ok=True)
+    raw_data_path:str=os.path.join("artifacts","raw.csv")
+    train_data_path:str=os.path.join("artifacts","train.csv")
+    test_data_path:str=os.path.join("artifacts","test.csv")
 
     
 class DataIngestion:
@@ -23,8 +21,9 @@ class DataIngestion:
     def ingest_data(self):
         try:
             logging.info('taking the dataset from the github')
-            url=url = 'https://raw.githubusercontent.com/sriramsriram3/Datasets/main/raw.csv'
+            url = 'https://raw.githubusercontent.com/sriramsriram3/Datasets/main/raw.csv'
             data=pd.read_csv(url)
+
             logging.info('read the data from the git hub')
 
             data.to_csv(self.config.raw_data_path,index=False)
@@ -37,13 +36,14 @@ class DataIngestion:
             test.to_csv(self.config.test_data_path,index=False)
             logging.info('saved the train and test into artifacts')
 
-            return self.config.test_data_path,self.config.train_data_path
+            return self.config.train_data_path,self.config.test_data_path
 
 
 
         except Exception as e:
-            logging.info()
+            logging.info('data ingestion is failed')
             raise custom_ecxeption(e,sys)
+        
 if __name__ == '__main__':
     ingest=DataIngestion()
     ingest.ingest_data()
