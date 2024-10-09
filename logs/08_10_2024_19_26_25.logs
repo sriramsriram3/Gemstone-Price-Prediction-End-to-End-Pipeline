@@ -1,0 +1,6 @@
+[2024-10-08 19:26:25,441] 19 root - INFO - this is my first message
+[2024-10-08 19:26:27,536] 23 root - INFO - taking the dataset from the github
+[2024-10-08 19:26:30,984] 27 root - INFO - read the data from the git hub
+[2024-10-08 19:26:33,186] 30 root - INFO - saved the raw dataset into the artifacts
+[2024-10-08 19:26:33,236] 33 root - INFO - splitted the data into train and test 
+[2024-10-08 19:26:35,846] 37 root - INFO - saved the train and test into artifacts

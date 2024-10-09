@@ -11,10 +11,11 @@ import pickle
 def load_model(filepath):
     try:
         with open(filepath, 'rb') as f:
-            return pickle.load(f)
-        logging.info('the model loading successfully')
+            model = pickle.load(f)
+        logging.info('The model loaded successfully')
+        return model
     except Exception as e:
-        logging.info('The model loading failed') 
+        logging.error('The model loading failed')
         raise custom_ecxeption(e, sys)
     
 # Saving the model
@@ -24,13 +25,26 @@ def save_model(filepath, obj):
         os.makedirs(file, exist_ok=True)
         with open(filepath, 'wb') as f:
             pickle.dump(obj, f)
-        logging.info('The model is saved successfully') 
+        logging.info('The model is saved successfully')
     except Exception as e:
-        logging.info('The model saving failed')  
+        logging.error('The model saving failed')
         raise custom_ecxeption(e, sys)
 
 # Evaluation of the model
 def evaluation(X_train, y_train, x_test, y_test, models):
+    """
+    Evaluate the performance of multiple models using R² score.
+
+    Parameters:
+    X_train (array-like): Training feature data.
+    y_train (array-like): Training target data.
+    x_test (array-like): Testing feature data.
+    y_test (array-like): Testing target data.
+    models (dict): Dictionary of models to evaluate.
+
+    Returns:
+    dict: A dictionary containing model names and their corresponding R² scores.
+    """
     try:
         report = {}
         for name, ind_model in models.items():
@@ -43,5 +57,5 @@ def evaluation(X_train, y_train, x_test, y_test, models):
         return report
 
     except Exception as e:
-        logging.info('Evaluation of the model failed')  
+        logging.error('Evaluation of the model failed')
         raise custom_ecxeption(e, sys)
