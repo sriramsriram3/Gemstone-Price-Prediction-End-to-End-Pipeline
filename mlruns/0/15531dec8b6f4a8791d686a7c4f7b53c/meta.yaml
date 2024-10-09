@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/15531dec8b6f4a8791d686a7c4f7b53c/artifacts
+end_time: 1728456174026
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 15531dec8b6f4a8791d686a7c4f7b53c
+run_name: rebellious-sow-747
+run_uuid: 15531dec8b6f4a8791d686a7c4f7b53c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728456149456
+status: 3
+tags: []
+user_id: anil.nagamunthala

@@ -1,0 +1,36 @@
+[2024-10-09 12:03:44,792] 19 root - INFO - this is my first message
+[2024-10-09 12:03:53,635] 23 root - INFO - taking the dataset from the github
+[2024-10-09 12:03:56,888] 27 root - INFO - read the data from the git hub
+[2024-10-09 12:03:59,120] 30 root - INFO - saved the raw dataset into the artifacts
+[2024-10-09 12:03:59,171] 33 root - INFO - splitted the data into train and test 
+[2024-10-09 12:04:01,310] 37 root - INFO - saved the train and test into artifacts
+[2024-10-09 12:04:01,774] 75 root - INFO - Train and test data read successfully
+[2024-10-09 12:04:01,788] 76 root - INFO - Train Dataframe Head:
+       id  carat        cut color clarity  depth  table     x     y     z  price
+0  155828   0.31      Ideal     E     VS1   62.9   57.0  4.27  4.29  2.69    734
+1   63571   0.30      Ideal     F     VS2   62.0   57.0  4.26  4.29  2.65    605
+2   18184   0.70  Very Good     J     VS2   62.8   57.0  5.61  5.66  3.54   1671
+3  175594   0.30      Ideal     E      IF   61.2   58.0  4.31  4.34  2.65    954
+4   28852   0.50       Good     F     VS2   64.9   57.0  4.98  4.94  3.22   1280
+[2024-10-09 12:04:01,803] 77 root - INFO - Test Dataframe Head:
+       id  carat        cut color clarity  depth  table     x     y     z  price
+0   76331   1.33      Ideal     H    VVS2   62.1   57.0  7.06  7.04  4.38   9341
+1  153029   0.34      Ideal     D      I1   61.6   56.0  4.49  4.55  2.78    393
+2  146804   0.90       Good     G     SI1   63.2   59.0  6.11  6.08  3.86   4059
+3   80716   1.20      Ideal     H     VS2   61.5   56.0  6.79  6.83  4.19   7001
+4  187970   0.57  Very Good     H     SI1   60.1   57.0  5.39  5.44  3.26   1241
+[2024-10-09 12:04:01,804] 26 root - INFO - Data transformation initiated
+[2024-10-09 12:04:01,804] 37 root - INFO - Pipeline initiated
+[2024-10-09 12:04:01,804] 57 root - INFO - Data transformation completed
+[2024-10-09 12:04:01,821] 93 root - INFO - Applying preprocessing pipeline on training and testing datasets
+[2024-10-09 12:04:02,529] 104 root - INFO - Saving transformation pipeline to: artifacts\preprocessor.pkl
+[2024-10-09 12:04:02,532] 28 root - INFO - The model is saved successfully
+[2024-10-09 12:04:02,532] 110 root - INFO - Preprocessing pickle file saved successfully
+[2024-10-09 12:04:02,542] 24 root - INFO - Splitting Dependent and Independent variables from train and test data
+[2024-10-09 12:04:04,962] 42 root - INFO - Model Report : {'LinearRegression': 0.9357960588690747, 'Lasso': 0.9357527543847379, 'Ridge': 0.9357971418355587, 'Elasticnet': 0.8531520394084425}
+[2024-10-09 12:04:04,963] 55 root - INFO - Best Model Found , Model Name : Ridge , R2 Score : 0.9357971418355587
+[2024-10-09 12:04:04,965] 28 root - INFO - The model is saved successfully
+[2024-10-09 12:04:04,965] 15 root - INFO - evaluation started
+[2024-10-09 12:04:04,967] 15 root - INFO - The model loaded successfully
+[2024-10-09 12:04:04,967] 33 root - INFO - model has register
+[2024-10-09 12:04:06,952] 21 root - INFO - evaluation metrics captured

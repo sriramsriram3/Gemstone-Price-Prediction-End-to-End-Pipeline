@@ -6,7 +6,7 @@ import pandas as pd
 from src.utils.utils import save_model
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransform
-# from src.components.model_evaluation import ModelEvaluation
+from src.components.model_evaluation import ModelEvaluation
 from src.components.model_trainer import ModelTrainer
 
 obj=DataIngestion()
@@ -20,5 +20,5 @@ mt=ModelTrainer()
 mt.initate_model_training(train_arr,test_arr)
 
 
-# me=ModelEvaluation()
-# me.initiate_model_evaluation(train_arr,test_arr)
+me=ModelEvaluation()
+me.initiate_model_evaluation(train_arr,test_arr)
