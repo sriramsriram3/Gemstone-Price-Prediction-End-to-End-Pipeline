@@ -1,0 +1,4 @@
+[2024-10-09 13:02:23,089] 19 root - INFO - this is my first message
+[2024-10-09 13:02:24,559] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-10-09 13:02:24,573] 97 werkzeug - INFO -  * Debugger PIN: 479-959-961
+[2024-10-09 13:02:26,420] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 13:02:26] "GET /predict HTTP/1.1" 200 -

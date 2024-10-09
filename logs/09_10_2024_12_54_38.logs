@@ -1,0 +1,8 @@
+[2024-10-09 12:54:38,448] 19 root - INFO - this is my first message
+[2024-10-09 12:54:39,572] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.9:8000
+[2024-10-09 12:54:39,573] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-10-09 12:54:44,885] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:54:44] "[31m[1mGET /predict HTTP/1.1[0m" 400 -
+[2024-10-09 12:55:28,544] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:55:28] "[31m[1mGET /predict HTTP/1.1[0m" 400 -

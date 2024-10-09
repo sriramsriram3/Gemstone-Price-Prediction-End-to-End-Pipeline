@@ -1,9 +1,9 @@
 import os
 import sys
 import pandas as pd
-from src.exception.exceptions import customexception
+from src.exception.exceptions import custom_ecxeption
 from src.logger.logger import logging
-from src.utils.utils import load_object
+from src.utils.utils import load_model
 
 
 class PredictPipeline:
@@ -17,8 +17,8 @@ class PredictPipeline:
             preprocessor_path=os.path.join("artifacts","preprocessor.pkl")
             model_path=os.path.join("artifacts","model.pkl")
 
-            preprocessor=load_object(preprocessor_path)
-            model=load_object(model_path)
+            preprocessor=load_model(preprocessor_path)
+            model=load_model(model_path)
 
             scaled_fea=preprocessor.transform(features)
             pred=model.predict(scaled_fea)
@@ -26,7 +26,7 @@ class PredictPipeline:
             return pred
 
         except Exception as e:
-            raise customexception(e,sys)
+            raise custom_ecxeption(e,sys)
 
 
 class CustomData:
@@ -69,4 +69,4 @@ class CustomData:
             return df
         except Exception as e:
             logging.info('Exception Occured in prediction pipeline')
-            raise customexception(e,sys)
+            raise custom_ecxeption(e,sys)

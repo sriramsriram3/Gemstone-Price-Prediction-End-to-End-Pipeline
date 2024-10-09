@@ -1,0 +1,14 @@
+[2024-10-09 12:43:04,259] 19 root - INFO - this is my first message
+[2024-10-09 12:43:06,623] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.9:8000
+[2024-10-09 12:43:06,623] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-10-09 12:44:44,031] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:44:44] "GET / HTTP/1.1" 200 -
+[2024-10-09 12:44:46,608] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:44:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-10-09 12:45:07,224] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:45:07] "GET / HTTP/1.1" 200 -
+[2024-10-09 12:45:08,632] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:45:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-10-09 12:46:13,517] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:46:13] "GET / HTTP/1.1" 200 -
+[2024-10-09 12:46:27,839] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:46:27] "GET / HTTP/1.1" 200 -
+[2024-10-09 12:46:40,440] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:46:40] "GET / HTTP/1.1" 200 -
+[2024-10-09 12:47:11,844] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:47:11] "GET / HTTP/1.1" 200 -

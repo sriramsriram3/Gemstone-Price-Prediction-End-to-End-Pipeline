@@ -1,0 +1,8 @@
+[2024-10-09 13:07:03,815] 19 root - INFO - this is my first message
+[2024-10-09 13:07:06,018] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-10-09 13:07:06,039] 97 werkzeug - INFO -  * Debugger PIN: 479-959-961
+[2024-10-09 13:07:06,904] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 13:07:06] "GET /predict HTTP/1.1" 200 -
+[2024-10-09 13:07:26,708] 68 root - INFO - Dataframe Gathered
+[2024-10-09 13:07:27,030] 15 root - INFO - The model loaded successfully
+[2024-10-09 13:07:27,031] 15 root - INFO - The model loaded successfully
+[2024-10-09 13:07:27,068] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 13:07:27] "POST /predict HTTP/1.1" 200 -

@@ -1,0 +1,6 @@
+[2024-10-09 12:59:05,934] 19 root - INFO - this is my first message
+[2024-10-09 12:59:07,760] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-10-09 12:59:07,782] 97 werkzeug - INFO -  * Debugger PIN: 479-959-961
+[2024-10-09 12:59:09,333] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:59:09] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+[2024-10-09 12:59:13,384] 97 werkzeug - INFO - 127.0.0.1 - - [09/Oct/2024 12:59:13] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+[2024-10-09 13:01:53,336] 97 werkzeug - INFO -  * Detected change in 'C:\\MLops\\End-End-Project\\Gemstone-Price-Prediction-End-to-End-Pipeline\\app.py', reloading
