@@ -1,0 +1,49 @@
+FROM python:3.10-slim-buster
+
+# Switch to root user
+USER root
+
+# Create the application directory
+RUN mkdir /app
+
+# Copy all files into the /app directory
+COPY . /app/
+
+# Set the working directory
+WORKDIR /app/
+
+# Install required Python packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Set environment variables for Airflow
+ENV AIRFLOW_HOME="/app/airflow"
+ENV AIRFLOW__CORE__DAG_BAG_IMPORT_TIMEOUT=1000
+ENV AIRFLOW__CORE__ENABLE_XCOM_PICKLING=True
+
+# Initialize the Airflow database
+RUN pip install apache-airflow  # Ensure Airflow is installed
+RUN airflow db init
+
+# Create an admin user for Airflow
+RUN airflow users create \
+    -e simhadrisriram3@gmail.com \
+    -f Simhadri \
+    -l Sriram \
+    -p admin \
+    -r Admin \
+    -u admin
+
+# Make the start.sh script executable
+RUN chmod +x start.sh
+
+# Update the package list and install necessary packages if required
+RUN apt update -y && apt install -y --no-install-recommends \
+    # Add any additional packages your application needs here
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+# Copy your DAGs into the Airflow DAGs directory
+COPY ./airflow/dags /app/airflow/dags
+
+# Set the entrypoint and command
+ENTRYPOINT ["/bin/sh"]
+CMD ["start.sh"]
